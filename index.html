@@ -12,33 +12,14 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 
-  <script>
-    function loadDoc() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "https://it-its.id/api/movies", true);
-
-        xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            const response = JSON.parse(this.responseText);
-
-            document.getElementsByClassName("card-title").innerHTML = response.Title;
-            document.getElementsByClassName("card-text").innerHTML = response.Plot;
-
-        }
-        else{
-            console.error("Terjadi kesalahan dalam permintaan")
-        }
-        };
-        xhttp.send();
-  }
-  </script>
 </head>
 
-<body onload = "loadDoc()">
+<body>
+    <script src="main.js"></script>
     <div class="row">
         <div class="col-sm-6 g-2">
           <div class="card">
-            <div class="card-body" onload = "loadDoc()">
+            <div class="card-body">
               <h5 class="card-title">Marriage Story</h5>
               <p class="card-text">Noah Baumbach's incisive and compassionate look at a marriage breaking up and a family staying together. </p>
             </div>
@@ -90,16 +71,16 @@
           <div class="col-sm-6 g-2">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <h5 class="card-title">Little Women</h5>
+                <p class="card-text">With their father fighting in the American Civil War, sisters Jo, Meg, Amy and Beth are at home with their mother...</p>
               </div>
             </div>
           </div>
           <div class="col-sm-6 g-2">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <h5 class="card-title">Parasite</h5>
+                <p class="card-text">All unemployed, Ki-taek and his family take peculiar interest in the wealthy and glamorous Parks, as they ingratiate ...</p>
               </div>
             </div>
           </div>
